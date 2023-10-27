@@ -15,11 +15,12 @@ export default function CreateBlogWidget() {
 function blogmanage(e){
  const blogname=e.target.blogname.value;
  const blogcontent=e.target.blogcontent.value;
+ const author = e.target.authorname.value
 //  console.log(blogname);
 //  console.log(blogcontent);
  setBlog([
   ...blog,
-  {title:blogname,content:blogcontent},
+  {title:blogname,content:blogcontent,date:new Date().toLocaleDateString(),author },
  
 
  ]);
@@ -50,14 +51,24 @@ console.log(blog);
           required/>
         </div>
         <div className="mb-3">
+          <label>Author</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Provide Author Name"
+            name="authorname"
+          required/>
+        </div>
+
+
+
+        <div className="mb-5">
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label> Content</Form.Label>
         <Form.Control as="textarea" rows={7} placeholder="Blog Content"  name="blogcontent" required />
       </Form.Group>
         </div>
-        <div className="mb-3">
-        <p> &nbsp; </p>
-        </div>
+
         <div className="d-grid">
           <button type="submit" className="btn btn-primary py-3 px-3" >
             Submit

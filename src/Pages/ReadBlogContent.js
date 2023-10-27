@@ -13,8 +13,8 @@ export default function ReadBlogContent() {
         <h1 className='readblog-mainhead'>{blog[id].title}</h1>
         <div className='readblog-author'>
         <hr/>
-            <span style={{ fontFamily: "sans-serif",marginLeft:"1em" }}><i class='bx bx-edit-alt' style={{fontSize:"1.2em"}}>:</i>Muneesh</span>
-            <span className='readblog-date'><b>Published:September 16,2022</b></span>
+            <span style={{ fontFamily: "sans-serif",marginLeft:"1em" }}><i class='bx bx-edit-alt' style={{fontSize:"1.2em"}}>:</i>{blog[id].author}</span>
+            <span className='readblog-date'><b>Published:{blog[id].date}</b></span>
             <hr/>
         </div>
         <div className='readblog'>

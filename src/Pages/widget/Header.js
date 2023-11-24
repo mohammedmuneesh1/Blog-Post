@@ -1,27 +1,26 @@
-import React from 'react'
-import {Nav,Navbar,Container} from 'react-bootstrap';
-import './widget.css';
-export default function Header() {
+import React from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+
+const MyNavbar = () => {
   return (
     <div>
-        <Navbar expand="lg" className="navbg">
-        {/* className="bg-body-tertiary" */}
+      <Navbar expand="lg" className="navbg">
         <Container>
-          <Navbar.Brand href="#home" className="fs-3 text-white"><b>Blogger</b></Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav"className='bg-white' />
+          <Navbar.Brand className="fs-3 text-white"><b>Blogger</b></Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-white" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto" id='navlist' >
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">About</Nav.Link>
-              <Nav.Link href="#link">Blogs</Nav.Link>
-              <Nav.Link href="#link">Feedback</Nav.Link>
-              <Nav.Link href="#link">Know More</Nav.Link>
-    
-           
+            <Nav className="ms-auto " id='navlist' style={{fontWeight:"600"}}>
+              <Nav className='text-white me-5 '>Home</Nav>
+              <Nav className='text-white me-5  '>About</Nav>
+              <Nav className='text-white me-5 '>Blogs</Nav>
+              <Nav className='text-white me-5 '>Feedback</Nav>
+              <Nav className='text-white me-5 '>Know More</Nav>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>
-  )
-}
+  );
+};
+
+export default MyNavbar;

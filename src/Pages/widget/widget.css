@@ -49,27 +49,23 @@
     letter-spacing: 2px;
     line-height: 2em;
 }
-.btn1{
-    padding: 0.875rem 1.25rem;
-    background-color: #ee7e0e;
+.btn1,.btn2{
     padding:15px 14px;
     border-radius: 3px;
     font-size: .8125rem;
     font-weight: 500;
     cursor: pointer;
+    outline: none;
+    border:none;
+
+}
+.btn1{
+    background-color: #ee7e0e;
 }
 .btn1:hover{
     background-color: #ff8000;
-    color:whitesmoke;
 }
-.btn2{
-    padding: 0.875rem 1.25rem;
-    padding:15px 14px;
-    border-radius: 3px;
-    font-size: .8125rem;
-    font-weight: 500;
-    cursor: pointer;
-}
+
 
 /* Home Content ends*/
 
@@ -160,4 +156,27 @@
 
 /*ReadBlog end here*/
 
+@media all and (max-width:500px){
+    .homecontent-head1{
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    .homecontent-head2{
+        color:white;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        margin-top:1rem;
+    }
+    .btn1,.btn2{
+        padding:13px 10px;
+        /* padding:0px; */
+        margin:0px 5px;
+        border-radius: 3px;
+        font-size: .8125rem;
+        font-weight: 400;
+    }
+}
+
+@media all and (max-width:300px){
     
+}

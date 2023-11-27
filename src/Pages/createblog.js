@@ -2,8 +2,8 @@ import React, { useContext} from "react";
 import './widget/widget.css';
 import {Form} from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
-import Blogs from "./blogs";
 import { BlogContext } from "./BlogContext";
+import Swal from "sweetalert2";
 
 
 
@@ -24,11 +24,17 @@ function blogmanage(e){
  
 
  ]);
- alert("Form Submitted Successfully");
- return navigate("/blogs");
+ Swal.fire({
+  // title: "Good job!",
+  text: "Blog Created Successfully",
+  icon: "success"
+}).then((result)=>{
+  if(result.isConfirmed){
+    navigate("/blogs");
+  }
+});
 
 }
-console.log(blog);
 
 
 

@@ -76,18 +76,19 @@
 /*create blog starts here*/
 
 .form-main{
-    position: fixed;
     width: 100%;
     min-height:100vh;
     background: rgb(32,210,254);
     background: linear-gradient(90deg, rgba(32,210,254,1) 0%, rgba(115,107,254,1) 100%);
+    padding-top:100px;
 }
 .blog-form{
     max-width:450px;
     background-color:white;
-    margin: 10em auto 0px ;
+    /* margin: 10em auto 0px ; */
     z-index: 1;
     padding:20px 15px;
+    margin:0px auto;
     
 }
 /*create blog ends here*/

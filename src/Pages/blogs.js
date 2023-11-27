@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { BlogContext } from "./BlogContext";
 import { Card, Button } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Blogs() {
   const navigate=useNavigate();
-  const { blog, setBlog } = useContext(BlogContext);
+  const { blog} = useContext(BlogContext);
   console.log(blog);
 
   return (
@@ -32,7 +32,9 @@ export default function Blogs() {
       </div>
       <div className="blogs-backto">
       <p className="blogs-backto-para">Want To Create Another Blog ?</p>
-      <Button onClick={()=>navigate("/createblog")}>Create Blog</Button>
+      <Button className="blogs-btn" onClick={()=>navigate("/createblog")}>Create Blog</Button>
+      <Button  className="blogs-btn bg-danger" onClick={()=>navigate("/")}>Home</Button>
+
     </div>
     </div>
   );
